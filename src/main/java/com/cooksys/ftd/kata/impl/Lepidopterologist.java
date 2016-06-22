@@ -1,10 +1,10 @@
 package com.cooksys.ftd.kata.impl;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 
 import com.cooksys.ftd.kata.ILepidopterologist;
 import com.cooksys.ftd.kata.model.Sample;
@@ -32,7 +32,6 @@ public class Lepidopterologist implements ILepidopterologist {
 
 	@Override
 	public Optional<Species> findSpeciesForSample(Sample sample) {
-		
 		return null;
 	}
 
@@ -48,8 +47,8 @@ public class Lepidopterologist implements ILepidopterologist {
 
 	@Override
 	public List<Sample> getSamplesForSpecies(Species species) {
-		if (species.equals(collect)) {
-			collect.add(species);
+		if (collect.equals(species)) {
+			return collect;
 		}
 		return collect;
 	}
@@ -61,6 +60,10 @@ public class Lepidopterologist implements ILepidopterologist {
 
 	@Override
 	public Map<Species, List<Sample>> getTaxonomy() {
+		Map<Species, List<Sample>> output = new HashSet();
+		for (Species s : output) {
+			
+		}
 		return null;
 	}
 
