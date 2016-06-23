@@ -4,6 +4,7 @@ public class Sample implements Comparable<Sample> {
 
 	private Butterpillar butterpillar;
 	private Catterfly catterfly;
+	private GrowthModel growthModel;
 
 	public Sample() {
 		super();
@@ -74,5 +75,9 @@ public class Sample implements Comparable<Sample> {
 		} else if (!catterfly.equals(other.catterfly))
 			return false;
 		return true;
+	}
+
+	public GrowthModel getGrowthModel() {
+		return growthModel;
 	}
 }
