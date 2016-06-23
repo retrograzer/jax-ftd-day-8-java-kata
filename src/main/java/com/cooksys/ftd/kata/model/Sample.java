@@ -77,7 +77,7 @@ public class Sample implements Comparable<Sample> {
 		return true;
 	}
 
-	public GrowthModel getGrowthModel() {
-		return growthModel;
+	public GrowthModel getGrowthModel(Species s) {
+		return s.getGrowthModel();
 	}
 }

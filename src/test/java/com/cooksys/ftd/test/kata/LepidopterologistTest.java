@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.cooksys.ftd.kata.ILepidopterologist;
+import com.cooksys.ftd.kata.model.GrowthModel;
 import com.cooksys.ftd.kata.model.Sample;
 import com.cooksys.ftd.kata.model.Species;
 
@@ -15,11 +16,19 @@ public class LepidopterologistTest {
 	
 	ILepidopterologist doctor;
 	Set<Species> implementations;
+	GrowthModel growy;
 	
 	@Before
 	public void before () {
-		Species s1 = new Species();
+		Species s1 = new Species("Lil Dicky", new GrowthModel(1.2, 2), 3);
+		Species s2 = new Species("Lil Dicky", new GrowthModel(1.2, 2), 3);
+		Species s3 = new Species("Lil Dicky", new GrowthModel(1.2, 2), 3);
+		Species s4 = new Species("Lil Dicky", new GrowthModel(1.2, 2), 3);
+		
 		implementations.add(s1);
+		implementations.add(s2);
+		implementations.add(s3);
+		implementations.add(s4);
 	}
 
 	@Test

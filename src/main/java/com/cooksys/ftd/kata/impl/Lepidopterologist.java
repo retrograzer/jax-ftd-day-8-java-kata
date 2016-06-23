@@ -38,7 +38,7 @@ public class Lepidopterologist implements ILepidopterologist {
 	@Override
 	public Optional<Species> findSpeciesForSample(Sample sample) {	
 		for (Species s : allSpecies) {
-			if (s.isMember(sample.getGrowthModel()) == true) {
+			if (s.isMember(sample.getGrowthModel(s)) == true) {
 				return Optional.of(s);
 			} else {
 				return Optional.empty();
